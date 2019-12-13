@@ -25,7 +25,7 @@ req_data = {
     'FUNDSTRANSFERACTRType': {
         'DebitAccount': '1000843713',
         'DebitCurrency': 'NGN',
-        'DebitAmount': '6000',
+        'DebitAmount': '1000',
         'DebitValueDate': '20180126',
         'DebitNarrative': 'IB FT Testing',
         'CreditNarrative': 'IB FT Testing',
@@ -45,3 +45,6 @@ req_data = {
 
 response = client.service.WSFT(**req_data)
 print(response.FUNDSTRANSFERType.DEBITAMOUNT)
+print(response.FUNDSTRANSFERType.DEBITACCTNO)
+print(response.Status.successIndicator)
+print(response.Status.transactionId)
